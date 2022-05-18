@@ -1,0 +1,79 @@
+<!-- 
+HTML site to display Dashboard via localhost
+
+Copyright (C) 2022  Jeff Schroeder
+##########################################################################
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see https://www.gnu.org/licenses/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hydrow Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <div class="py-3"></div>
+   <div class = "container"style = "border:lightgray 6px solid; width: 70vw">
+
+         <div class = "row"style ="height: 56vh;">
+            <div class = "col-9" style = "border:lightgray 6px solid;">
+                <div class = "chart-title" id="MainChartTitle">CURRENT PROGRESS</div> 
+                <div class = "chart-body">
+                  <canvas id="36weeks"></canvas>
+                </div>
+            </div>
+            <div class = "col-3">
+              <div class = "row"style = "border:lightgray 6px solid;height: 14vh;">
+                <div class= "dashboard-text" id="currentWeek"></div>
+                <div class= "dashboard-label">WEEKS</div>
+              </div>
+              <div class = "row"style = "border:lightgray 6px solid;height: 14vh;">
+                <div class="progress">
+                  <div class = "progress-bar bg-primary" id="percentComplete"></div>
+                </div>
+                <div class= "dashboard-label">TOTAL METERS</div>
+              </div>
+              <div class = "row"style = "border:lightgray 6px solid;height: 14vh;">
+                <div class= "dashboard-text" id="rowDays"></div>
+                <div class= "dashboard-label">DAYS ROWED</div>
+              </div>
+              <div class = "row"style = "border:lightgray 6px solid;height: 14vh;">
+                <div class= "dashboard-text" id="avgMperday"></div>
+                <div class= "dashboard-label">AVG M/SESSION</div>
+              </div>
+            </div>
+         </div>
+         
+         <div class = "row" id="dashrow2">
+            <div class = "col-6"id="dashrow2" style = "border:lightgray 6px solid;">
+              <div class = "chart-title">SPI</div> 
+              <div class = "chart-body">
+                <canvas id="spi"></canvas>
+              </div>
+            </div>
+            <div class = "col-6"id="dashrow2" style = "border:lightgray 6px solid;">
+              <div class = "chart-title">AVG POWER</div>
+              <div class = "chart-body">
+                <canvas id="power"></canvas>
+              </div>
+            </div>
+         </div>
+        </div>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script> <!--need Chart.js for the charts-->
+    <script src="js/chart.js"></script> <!--Load charts-->
+  </body>
+</html>

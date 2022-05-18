@@ -1,0 +1,5 @@
+CREDITS
+
+Bootstrap 4  -  https://getbootstrap.com
+
+ChartJS  -  https://www.chartjs.org/
