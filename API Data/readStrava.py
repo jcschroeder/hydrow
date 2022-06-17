@@ -59,9 +59,12 @@ jlist = []
 
 #Strava paginates the response but doesn't return the number of pages
 while True:
-    params = {'client_id': client_id, 'client_secret': client_secret,'per_page':50, 'page':page}
+    params = {'client_id': client_id, 'client_secret': client_secret,'per_page':100, 'page':page}
     r = requests.get(url, headers=headers, params=params)
     
+    #Added since there's no error handling. If this response is anything other than [200], kill it, there's an issue
+    #Note: it should print for every 100 activities it pulls
+    print(r) 
     j = json.loads(r.text)
     
     #This isn't best practice, but this while loop is small and this is easier
